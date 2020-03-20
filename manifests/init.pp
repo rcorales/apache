@@ -1,7 +1,6 @@
 class apache {
-
-#        package { 'httpd':
-#                ensure => present,
-#        }
+        package { 'httpd':
+                ensure => present,
+        }
 
 }
