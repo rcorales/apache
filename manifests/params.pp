@@ -24,3 +24,4 @@ case $::osfamily {
                 $vhost_dir    = "/etc/apache2/sites-enabled"
        }
 }
+}
