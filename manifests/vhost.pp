@@ -7,7 +7,7 @@ file { 'index':
         before  => File['config_file'],
 }
 
-file 'config_file':
+file {'config_file':
       path    =>  "${vhost_dir/${servername}.conf",
       content =>  template('apache/vhost.conf.erb'),
       require => Package['apache'],
