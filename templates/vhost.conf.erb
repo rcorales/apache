@@ -2,7 +2,8 @@
         ServerName <%= @servername %>
 
         ServerAdmin webmaster@company.com
-        DocumentRoot <%= @document_root %>
+#        DocumentRoot <%= @document_root %>
+        DocumentRoot /var/www/html
 
         Errorlog <%= @log_dir -%>/<%= @servername -%>-error.log
         CustomLog <%= @log_dir -%>/<%= @servername -%>-access.log combined
