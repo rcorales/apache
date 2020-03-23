@@ -1,4 +1,4 @@
-define apache::vhost:: ($port, $document_root, $servername, $vhost_name = '*', $vhost_dir) {
+define apache::vhost ($port, $document_root, $servername, $vhost_name = '*', $vhost_dir) {
 
 file { 'index':
         path    => "${document_root}/index.html",
@@ -13,4 +13,4 @@ file 'config_file':
       require => Package['apache'],
       notify  => Service['apache'],
 
-}      
+}
