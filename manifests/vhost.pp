@@ -1,5 +1,9 @@
 define apache::vhost ($port, $document_root, $servername, $vhost_name = '*', $vhost_dir) {
 
+        File  {
+                mode => 0677,
+        }
+
 file { 'index':
         path    => "${document_root}/index.html",
         ensure  => file,
@@ -12,5 +16,5 @@ file {'config_file':
       content =>  template('apache/vhost.conf.erb'),
       require => Package['apache'],
       notify  => Service['apache'],
-  }    
+  }
 }
