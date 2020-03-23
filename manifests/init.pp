@@ -21,10 +21,10 @@ file { $log_dir:
         recurse => true,
 }
 
-apache::vhost { 'default':
+apache::vhost { "default":
         port          =>  80,
         document_root =>  $document_root,
-        server_name   =>  $servername,
+        servername    =>  $servername,
         vhost_dir     =>  $vhost_dir,
 
 }
