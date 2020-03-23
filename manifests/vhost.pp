@@ -8,9 +8,9 @@ file { 'index':
 }
 
 file {'config_file':
-      path    =>  "${vhost_dir/${servername}.conf",
+      path    =>  "${vhost_dir}/${servername}.conf",
       content =>  template('apache/vhost.conf.erb'),
       require => Package['apache'],
       notify  => Service['apache'],
-
+  }    
 }
