@@ -30,17 +30,3 @@ apache::vhost { "default":
 }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-}
