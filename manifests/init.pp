@@ -11,10 +11,10 @@ class apache (
 include apache::package
 include apache::service
 
-file { $document_root:
-        ensure  => directory,
-        recurse => true,
-}
+#file { $document_root:
+#        ensure  => directory,
+#        recurse => true,
+#}
 
 file { $log_dir:
         ensure  => directory,

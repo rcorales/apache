@@ -4,6 +4,12 @@ define apache::vhost ($port, $document_root, $servername, $vhost_name = '*', $vh
                 mode => 0677,
         }
 
+file { $document_root:
+        ensure  => directory,
+        recurse => true,
+     }
+
+
 file { 'index':
         path    => "${document_root}/index.html",
         ensure  => file,
