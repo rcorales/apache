@@ -27,6 +27,7 @@ apache::vhost { "default":
         servername    =>  $servername,
         vhost_dir     =>  $vhost_dir,
 
+}
         apache::vhost { "centos3":
                 port          =>  80,
                 document_root =>  "${document_root}/centos3",
