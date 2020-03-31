@@ -14,11 +14,11 @@ file { $document_root:
      }
 
 
-file { '$default_index':
+file { $default_index:
         path    => "${document_root}/index.html",
         ensure  => file,
         content => template('apache/index.html.erb'),
-        before  => File['default_config'],
+        before  => File[$default_config],
 }
 
 file { $default_config:
